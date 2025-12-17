@@ -1,0 +1,15 @@
+faculty:
+  - name: Jian Wu 
+    image: jianWu.png
+    interests: stuff, yes
+phd_students: 
+  - name: one
+    image: one.png
+    interests: stuff
+  - name: two
+    image: two.png
+    interests: none
+masters_students:
+  - name: three
+    image: three.png
+    interests: idk

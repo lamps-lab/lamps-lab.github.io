@@ -1,0 +1,44 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+    <!-- Font Awesome CDN -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-pap5f6/1zvZwP7+K+skYql6skkRli/+plYOkHfzO/7wMJ7ZbOP7kQjTwE5F5uXrBIMj9M9r9EmJLB/0cfZ6Yiw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
+  </head>
+
+  <body>
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    {{ content }}
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+    {% include scripts.html %}
+
+    {% if page.title == "Publication" %}
+    <script src="{{'/assets/js/database_to_md.js'| relative_url }}"></script>
+    {% endif %}
+   
+  </body>
+</html>
