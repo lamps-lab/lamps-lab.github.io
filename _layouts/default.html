@@ -37,7 +37,7 @@ layout: compress
     {% include scripts.html %}
 
     {% if page.title == "Publication" %}
-    <script src="{{'/assets/js/database_to_md.js'| relative_url }}"></script>
+    <script src="{{'/assets/js/database_to_md.js'| relative_url }}" defer></script>
     {% endif %}
    
   </body>
