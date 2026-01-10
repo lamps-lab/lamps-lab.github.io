@@ -1,15 +1,107 @@
 faculty:
   - name: Jian Wu 
     image: jianWu.png
-    interests: stuff, yes
+    interests:
+    links:
+      - icon: "google-scholar"
+        url: "https://scholar.google.com/citations?user=-eRsYx8AAAAJ&hl=en"
+      - icon: "github"
+        url: "https://www.cs.odu.edu/~jwu/"
 phd_students: 
-  - name: one
-    image: one.png
-    interests: stuff
-  - name: two
-    image: two.png
-    interests: none
+  - name: Dominik Soos
+    image: dominikSoos.jpg
+    links:
+      - icon: "google-scholar"
+        url: "https://scholar.google.com/citations?user=zqSvJesAAAAJ"
+      - icon : "github"
+        url: "https://domsoos.github.io/"
+  - name: Rochana R. Obadage
+    image: Rochana.jpg
+    links:
+      - icon: "google-scholar"
+        url: "https://scholar.google.com/citations?user=pXdNaIQAAAAJ"
+      - icon : "github"
+        url: " https://rochanaro.github.io/"
+  - name: Lamia Salsabil
+    image: lamia.jpg
+    links:
+      - icon: "google-scholar"
+        url: " https://scholar.google.com/citations?user=7TC5ZCEAAAAJ"
+      - icon : "github"
+        url: "https://liyalamia.github.io/Portfolio/"
+  - name: Chameli Dommanige
+    image: chameli.jpg
+    links:
+      - icon: "google-scholar"
+        url: "https://scholar.google.com/citations?user=dyQ8NCMAAAAJ"
+      - icon : "github"
+        url: "https://chamelid.github.io/my-a-profile/"
 masters_students:
-  - name: three
-    image: three.png
-    interests: idk
+undergraduate_students:
+  - name: Gabriel Vega Osborne
+  - name: Dechawn Baker
+past_phd_students:
+  - name: Xin wei
+    image: xinwei.png
+    links:
+      - icon: "google-scholar"
+        url: "https://scholar.google.com/citations?user=6xyfqsgAAAAJ&hl=en"
+      - icon : "github"
+        url: "https://xinw6.github.io/"
+  - name: Kehinde Ajayi
+    image: kehinde.jpg
+    links:
+      - icon: "google-scholar"
+        url: "https://scholar.google.com/citations?user=ib2zhJQAAAAJ&hl=en"
+      - icon : "github"
+        url: "https://www.cs.odu.edu/~cs_kajay001/ "
+  - name: Muntabir Choudhury
+    image: MuntabirChoudhury.png
+    links:
+      - icon: "google-scholar"
+        url: "https://scholar.google.com/citations?user=HudTafsAAAAJ&hl=en"
+      - icon : "github"
+        url: "https://www.cs.odu.edu/~cs_mchou001/"
+    
+past_masters_students:
+  - name: Sami Uddin
+    image: Rayan-main2.jpg
+    links:
+      - icon: "google-scholar"
+        url: "https://scholar.google.com/citations?user=9GJoF4AAAAAJ&hl"
+      - icon : "github"
+        url: "https://rayansami.github.io/"
+
+past_undergratuate_students:
+  - name: Sencer Eloquin
+  - name: Cindy Canupp
+  - name: Lee Logan
+  - name: Zia Yandoc
+  - name: Hunter McQuaid
+  - name: Stefania Dzhaman (Lehigh)
+  - name: Benjamin Curtis (JMU)
+  - name: Matthew Maisonave
+  - name: Zihe Wang (OSU)
+  - name: Bill Chen (PSU)
+  - name: Li-Zhi Lin
+  - name: Winston Shields
+  - name: Ryan Hiltabrand
+  - name: Kyle Canady
+  - name: Martin Gryder
+  - name: Gunnar Resike
+  - name: Andrew Mayes
+  - name: Bradley Dash
+  - name: Jianyu Mao (PSU)
+  - name: Seth Wilcox (PSU)
+  - name: Allen Ge (PSU)
+  - name: Scot O’Connell (PSU)
+  - name: Jason Killian (PSU)
+  - name: Huaiyu (David) Tang (Vanderbilt)
+
+
+past_highschool_students: 
+  - name: Tyler Chen (Princess Anne, Virginia Beach)
+  - name: Andrew Jiang (Norman North High)
+  - name: Alyssa Vagas (Governor’s School of Science and Technology)
+  - name: Bryce Kemmey (Massaponax High)
+  - name: Huaiyu (David) Yang (State College Area High)
