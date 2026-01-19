@@ -20,7 +20,7 @@ classes: "people-page"
       {% if person.links %}
       <div class="person-links">
         {% for link in person.links %}
-          <a href="{{ link.url }}" target="_blank" rel="noopener">
+          <a href="{{ link.url }}" target="blank" rel="noopener">
             <i class="fab fa-{{ link.icon }}"></i>
           </a>
         {% endfor %}
@@ -42,7 +42,7 @@ classes: "people-page"
               {% if person.links %}
       <div class="person-links">
         {% for link in person.links %}
-          <a href="{{ link.url }}" target="_blank" rel="noopener">
+          <a href="{{ link.url }}" target="blank" rel="noopener">
             <i class="fab fa-{{ link.icon }}"></i>
 
           </a>
@@ -73,7 +73,7 @@ classes: "people-page"
               {% if person.links %}
       <div class="person-links">
         {% for link in person.links %}
-          <a href="{{ link.url }}" target="_blank" rel="noopener">
+          <a href="{{ link.url }}" target="blank" rel="noopener">
             <i class="fab fa-{{ link.icon }}"></i>
 
           </a>
@@ -94,8 +94,8 @@ classes: "people-page"
               {% if person.links %}
       <div class="person-links">
         {% for link in person.links %}
-          <a href="{{ link.url }}" target="_blank" rel="noopener">
-            <i class="fab fa-{{ link.icon }}"></i>
+          <a href="{{ link.url }}" target="blank" rel="noopener">
+            <i class="fab fa-{{ link.icon}}"></i>
 
           </a>
         {% endfor %}

@@ -426,12 +426,22 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
 }
 
 .person-links a {
-  color: #555;
+  color: var(--global-text-color);
   font-size: 0.95rem;
   margin: 0 0.3rem;
   transition: color 0.2s ease;
+  text-decoration: none !important;
 }
 
 .person-links a:hover {
   color: #007acc;
 }
+
+.publication{
+  margin: 20px;
+  padding: 10px;
+}   
+.citationManager{
+      justify-content: center;
+      text-align: center;
+    }

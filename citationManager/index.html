@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/citation-js@0.7.22/build/citation.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@citation-js/plugin-csl@0.7.22/lib/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@citation-js/core@0.7.21/lib/index.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
+  </head>
+  <body>
+    <a href="/publications/index.html">Publications display</a>
+    <div class="citationForm">
+      <form id="citationform">
+        <label>Type: </label>
+        <select name="type" id="type" required>
+          <option disabled selected value>-- select an option --</option>
+          <option value="article-journal">Journal Article</option>
+          <option value="paper-conference">Conference Paper</option>
+          <option value="book">Book</option>
+          <option value="webpage">Webpage</option>
+        </select>
+        <br />
+
+        <label>Title: <input type="text" id="title" required /></label><br />
+        <label
+          >Authors (comma-separated):
+          <input
+            type="text"
+            id="authors"
+            placeholder="e.g. J. Doe, A. Smith" /></label
+        ><br />
+
+        <label
+          >Journal / Conference / Website:
+          <input type="text" id="container" /></label
+        ><br />
+
+        <label
+          >Publisher / Location:
+          <input
+            type="text"
+            id="publisher"
+            placeholder="e.g. IEEE or New York, NY" /></label
+        ><br />
+
+        <label>Year: <input type="number" id="year" /></label><br />
+        <label>Volume: <input type="text" id="volume" /></label><br />
+        <label>Issue: <input type="text" id="issue" /></label><br />
+        <label>Pages: <input type="text" id="pages" /></label><br />
+
+        <label>DOI / URL: <input type="text" id="doi" /></label><br />
+
+        <button  id="submit" type="submit">
+          Generate IEEE Citation
+        </button>
+      </form>
+      <h1 id="add"></h1>
+    </div>
+
+    <div id="references">
+      <h1 References></h1>
+    </div>
+    <input type="checkbox" id = "harukite-ikou!">
+    <img id="tempImage" src="kitasanblack.png" style="display: none;">
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 faculty:
   - name: Jian Wu 
-    image: jianWu.png
+    image: jianwu.jpg
     interests:
     links:
       - icon: "google-scholar"
@@ -41,8 +41,8 @@ undergraduate_students:
   - name: Gabriel Vega Osborne
   - name: Dechawn Baker
 past_phd_students:
-  - name: Xin wei
-    image: xinwei.png
+  - name: Xin Wei
+    image: xinwei.jpg
     links:
       - icon: "google-scholar"
         url: "https://scholar.google.com/citations?user=6xyfqsgAAAAJ&hl=en"

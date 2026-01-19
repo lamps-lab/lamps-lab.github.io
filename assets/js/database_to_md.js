@@ -22,98 +22,80 @@ firebase.initializeApp(firebaseConfig);
 
 
 const db = firebase.firestore();
-/*
-
-function datafill(data){
-  const db = {...referenceTemplate, ...data};
-  return db;
-}
-
-db.collection("references").add(datafill({
-  authors: ["john author taylor", "Sean sanghavi"],
-  year: "2006",
-  title:"Assessment: A tool for development and engagement in the first year of university study",
-  conference: "Engaging Students: 9th Pacific Rim in Higher Education (FYHE) Conf., Griffith, Australia",
-  format: "online",
-  link:" http://www.fyhe.com.au/past_papers/2006/Papers/Taylor.pdf"
-}))
-.then((docRef) => {
-    console.log("Document written with ID: ", docRef.id);
-})
-.catch((error) => {
-    console.error("Error adding document: ", error);
-});
-*/
-
-const referenceTemplate = {
-    authors: [],
-    year: "",
-    title: "",
-    conference: "",
-    format: "",
-    link: ""
-  };
-
-  // Format authors for IEEE (first initials + last name)
-  function formatAuthors(authors) {
-    return authors.map(name => {
-      const parts = name.trim().split(" ");
-      let last = parts.pop();
-      const initials = parts.map(n => n[0].toUpperCase() + ".").join(" ");
-  
-      return `${initials} ${last.charAt(0).toUpperCase()+last.slice(1)}`;
-    }).join(", ");
-  }
-
- function buildIEEECitation(data) {
-  const authors = formatAuthors(data.authors || []);
-  const title = data.title || "";
-  const conf = data.conference || "";
-  const year = data.year || "";
-  const link = data.link || "";
-  const format = data.format || "";
-
-  // Base citation without the link
-  const citationText = `${authors}, "${title}," ${conf}, ${year}.`;
-
-  return { citationText, link, format };
-}
 
 async function populatePublications() {
   const container = document.getElementsByClassName("archive")[0];
   if (!container) return;
+  try {
 
-  const querySnap = await db.collection("references").get();
+    const querySnap = await db.collection("citations").get();
+    const publicationsByYear = {};
 
-  querySnap.forEach(doc => {
-    const data = doc.data();
-    const { citationText, link, format } = buildIEEECitation(data);
+    querySnap.forEach(doc => {
+      const data = doc.data();
+      const year = data.year || "Other"; 
+      const text = data.formattedText;
+      if (!publicationsByYear[year]) {
+        publicationsByYear[year] = [];
+      }
+      publicationsByYear[year].push({
+        text: text,
+        url: data.URL || data.DOI || null
+      });
+    });
 
-    const div = document.createElement("div");
-    div.className = "publication";
+    // Sort years descending
+    const sortedYears = Object.keys(publicationsByYear)
+      .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }));
 
-    // Add main citation text
-    const span = document.createElement("span");
-    span.textContent = citationText;
-    div.appendChild(span);
+    container.innerHTML = ""; 
+    let title = document.createElement("h1");
+    title.textContent = "Publications";
+    let manager  = document.createElement("a");
+    manager.textContent = "Manage Citations";
+    manager.className = "citationManager;"
+    manager.href = "/citationManager/index.html"
+    container.appendChild(title);
+    container.appendChild(manager);
 
-    // If online, add full link as clickable text
-    if (format.toLowerCase() === "online" && link) {
-      const a = document.createElement("a");
-      a.href = link;
-      a.textContent = ` [Online]. Available: ${link}`; // full link text
-      a.target = "_blank"; // open in new tab
-      a.rel = "noopener noreferrer"; // security best practice
-      div.appendChild(a);
-    }
+    // show grouped by year
+    sortedYears.forEach(year => {
+      const yearHeader = document.createElement("h3");
+      yearHeader.className = "publication-year";
+      yearHeader.style = "margin-top: 30px; border-bottom: 2px solid #000; padding-bottom: 5px;";
+      yearHeader.textContent = year;
+      container.appendChild(yearHeader);
 
-    container.appendChild(div);
-  });
+      publicationsByYear[year].forEach(pub => {
+        const div = document.createElement("div");
+        div.className = "publication";
+        div.style = "margin-bottom: 15px; padding: 5px 0;";
+
+        const span = document.createElement("span");
+        span.textContent = pub.text; 
+        div.appendChild(span);
+
+        // Add a link button if a URL/DOI exists
+        if (pub.url) {
+          const link = document.createElement("a");
+          link.href = pub.url.startsWith('http') ? pub.url : `https://doi.org/${pub.url}`;
+          link.target = "_blank";
+          link.textContent = " [View Paper]";
+          link.style = "font-size: 0.9em; color: #FF0000; text-decoration: none; margin-left: 10px;";
+          div.appendChild(link);
+        }
+
+        container.appendChild(div);
+      });
+    });
+  } catch (err) {
+    console.error("Error loading archive:", err);
+    container.innerHTML = "Error loading publications.";
+  }
 }
 
-
-
-  populatePublications();
+// Initialize on page load
+populatePublications();
 
 
 
