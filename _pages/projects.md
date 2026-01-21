@@ -14,5 +14,6 @@ The Old Dominion University (ODU), in collaboration with the Internet Archive
 
 
 # Past Projects
-## Synthetic Prediction markets with Algorithm Traders for Determining Experimental Reproducibility
-
+## Synthetic Prediction Markets with Algorithm Traders for Determining Experimental Reproducibility  
+This project studies repeatability and reproducibility of experiments in academic papers published in social science by researching and developing systems and methods for assigning confidence scores to specific findings published in the social science literature. The final product is a synthesized prediction market that automatically assess replicability of research claims. This project is supported by [Defense Advanced Research Projects Agency ](https://www.darpa.mil/research/programs/systematizing-confidence-in-open-research-and-evidence)(DARPA). It is a collaborative effort of The Center for Open Science, [Pennsylvania State University](https://www.psu.edu/news/research/story/multi-institutional-team-use-ai-evaluate-social-behavioral-science-claims), Texas A&M University, Microsoft Research, ODU, and several other universities and research institutes. The ODU team works with PSU and Texas A&M University to perform information extraction from scholarly papers.  
+[Project Website](https://www.cos.io/score)
