@@ -198,7 +198,7 @@ const csldata = `
         <choose>
           <if variable="container-title" match="any">
             <group delimiter=" ">
-              <text term="in"/>
+              <text term="In the Proceedings of the"/>
               <text variable="container-title" font-style="italic"/>
             </group>
           </if>
@@ -584,7 +584,7 @@ document.getElementById("citationform").addEventListener("submit", async functio
     return { family: name }; 
   });
 
-  // Build the data object to match CSL variables
+
   let data = {
     type: document.getElementById("type").value,
     title: document.getElementById("title").value,

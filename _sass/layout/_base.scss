@@ -445,3 +445,25 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
       justify-content: center;
       text-align: center;
     }
+
+
+
+
+
+.download-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+.download-card {
+  padding: 20px;
+  width: 100%;
+}
+
+.download-card h3 {
+  margin-top: 0;
+  color: #333;
+}
