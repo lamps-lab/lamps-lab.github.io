@@ -8,7 +8,7 @@ faculty:
       - icon: "github"
         url: "https://www.cs.odu.edu/~jwu/"
 phd_students: 
-  - name: Dominik Soos
+  - name: Dominik Soós
     image: dominikSoos.jpg
     links:
       - icon: "google-scholar"
