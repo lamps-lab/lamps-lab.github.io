@@ -1,7 +1,6 @@
 faculty:
   - name: Jian Wu 
     image: jianwu.jpg
-    interests:
     links:
       - icon: "google-scholar"
         url: "https://scholar.google.com/citations?user=-eRsYx8AAAAJ&hl=en"
