@@ -54,7 +54,7 @@ async function populatePublications() {
     let manager  = document.createElement("a");
     manager.textContent = "Manage Citations";
     manager.className = "citationManager;"
-    manager.href = "/citationManager/index.html"
+    manager.href = "/citationManager/signIn.html"
     container.appendChild(title);
     container.appendChild(manager);
 

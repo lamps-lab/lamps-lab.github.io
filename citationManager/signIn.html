@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore-compat.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign In</h1>
+    <form id="signIn">
+        <label>Username
+            <input type="text" id="username" required>
+        </label>
+        <label>Password
+            <input type="password" id="password" required>
+        </label>
+        <button id="submit" type="submit">Sign In</button>
+    </form>
+    <div id="errorMessage" class="error"></div>
+
+    <script>
+        // Initialize Firebase (replace with your config)
+        var firebaseConfig = {
+  apiKey: "AIzaSyCFHR_wxJFsGzEGsVbEQ6RVetwZQGPHdrw",
+  authDomain: "lampsys-website-citationgen.firebaseapp.com",
+  projectId: "lampsys-website-citationgen",
+  storageBucket: "lampsys-website-citationgen.firebasestorage.app",
+  messagingSenderId: "75724220420",
+  appId: "1:75724220420:web:4ced53c569194253d76d51",
+  measurementId: "G-2KJZSV8FVV"
+};
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Handle form submission
+        document.getElementById('signIn').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('errorMessage');
+            
+            // Clear previous error
+            errorDiv.textContent = '';
+            
+            try {
+                // Query Firestore for matching credentials
+                const userQuery = await db.collection('users')
+                    .where('username', '==', username)
+                    .where('password', '==', password)
+                    .get();
+                
+                if (!userQuery.empty) {
+                    // Credentials match - redirect to your page
+                    window.location.href = 'https://lamps-lab.github.io/citationManager/index.html'; // Change to your target page
+                } else {
+                    // No match - show error
+                    errorDiv.textContent = 'Invalid username or password. Please try again.';
+                }
+            } catch (error) {
+                errorDiv.textContent = 'An error occurred. Please try again.';
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
+
