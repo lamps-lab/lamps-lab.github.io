@@ -4,7 +4,7 @@ faculty:
     links:
       - icon: "google-scholar"
         url: "https://scholar.google.com/citations?user=-eRsYx8AAAAJ&hl=en"
-      - icon: "github"
+      - icon: "sistrix"
         url: "https://www.cs.odu.edu/~jwu/"
 phd_students: 
   - name: Dominik Soós
@@ -12,28 +12,28 @@ phd_students:
     links:
       - icon: "google-scholar"
         url: "https://scholar.google.com/citations?user=zqSvJesAAAAJ"
-      - icon : "github"
+      - icon : "sistrix"
         url: "https://domsoos.github.io/"
   - name: Rochana R. Obadage
     image: Rochana.jpg
     links:
       - icon: "google-scholar"
         url: "https://scholar.google.com/citations?user=pXdNaIQAAAAJ"
-      - icon : "github"
+      - icon : "sistrix"
         url: " https://rochanaro.github.io/"
   - name: Lamia Salsabil
     image: lamia.jpg
     links:
       - icon: "google-scholar"
         url: " https://scholar.google.com/citations?user=7TC5ZCEAAAAJ"
-      - icon : "github"
+      - icon : "sistrix"
         url: "https://liyalamia.github.io/Portfolio/"
   - name: Chameli Dommanige
     image: chameli.jpg
     links:
       - icon: "google-scholar"
         url: "https://scholar.google.com/citations?user=dyQ8NCMAAAAJ"
-      - icon : "github"
+      - icon : "sistrix"
         url: "https://chamelid.github.io/my-a-profile/"
 masters_students:
 undergraduate_students:
@@ -45,21 +45,21 @@ past_phd_students:
     links:
       - icon: "google-scholar"
         url: "https://scholar.google.com/citations?user=6xyfqsgAAAAJ&hl=en"
-      - icon : "github"
+      - icon : "sistrix"
         url: "https://xinw6.github.io/"
   - name: Kehinde Ajayi
     image: kehinde.jpg
     links:
       - icon: "google-scholar"
         url: "https://scholar.google.com/citations?user=ib2zhJQAAAAJ&hl=en"
-      - icon : "github"
+      - icon : "sistrix"
         url: "https://www.cs.odu.edu/~cs_kajay001/ "
   - name: Muntabir Choudhury
     image: MuntabirChoudhury.png
     links:
       - icon: "google-scholar"
         url: "https://scholar.google.com/citations?user=HudTafsAAAAJ&hl=en"
-      - icon : "github"
+      - icon : "sistrix"
         url: "https://www.cs.odu.edu/~cs_mchou001/"
     
 past_masters_students:
@@ -68,7 +68,7 @@ past_masters_students:
     links:
       - icon: "google-scholar"
         url: "https://scholar.google.com/citations?user=9GJoF4AAAAAJ&hl"
-      - icon : "github"
+      - icon : "home"
         url: "https://rayansami.github.io/"
 
 past_undergratuate_students:
